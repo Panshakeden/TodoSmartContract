@@ -32,19 +32,19 @@ struct MyTodo{
    
  }
 
-//  function UpdateTodos(uint256 _id,string memory _name, string memory _title, string memory _description, bool _IsDone)public  {
-//     todos[_id]=MyTodo({
-//         name:_name,
-//         title:_title,
-//         description:_description,
-//         IsDone:_IsDone
-//     });
-//  }
+ function UpdateTodos(uint256 _id,string memory _name, string memory _title, string memory _description, bool _IsDone)public  {
+    todos[_id]=MyTodo({
+        name:_name,
+        title:_title,
+        description:_description,
+        IsDone:_IsDone
+    });
+ }
 
-//  function DeleteArray(uint _id) public {
-//     delete todos[_id];
+ function DeleteArray(uint _id) public {
+    delete todos[_id];
     
-//  }
+ }
 
 
 
