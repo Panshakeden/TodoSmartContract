@@ -28,7 +28,13 @@ describe("To do test", function () {
       assert.isNotNull(todo);
     });
 
- 
+       it("to check that an array exist", async function(){
+      const {todo} = await loadFixture(deployTodo);
+      await  todo.createTodo("eden","zarah","hello",false);
+      // await  todo.createTodo("eden","zarah","hello",false);
+      const  GetTodo= await todo.getTodo();
+        expect(GetTodo).with.lengthOf(2);
+      })
 
     });
   });
